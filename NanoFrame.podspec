@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/appsquickly/NanoFrame"
   s.license      = { :type => 'Apache2.0', :file => 'LICENSE' }
   s.author       = { "Jasper Blues" => "jasper@appsquick.ly" } 
-  s.source       = { :git => "git@github.com:appsquickly/NanoFrame.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/appsquickly/NanoFrame.git", :tag => s.version.to_s }
   s.platform     = :ios
   s.source_files = 'Source/**/*.{h,m}'
   s.frameworks   = 'QuartzCore'
