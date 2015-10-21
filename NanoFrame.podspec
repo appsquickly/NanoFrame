@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NanoFrame"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "A minimal frame-based layout and UIKit additions."
   s.homepage     = "https://github.com/appsquickly/NanoFrame"
   s.license      = { :type => 'Apache2.0', :file => 'LICENSE' }
