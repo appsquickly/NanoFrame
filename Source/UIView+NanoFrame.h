@@ -49,4 +49,8 @@
 
 - (void)alignRightHorizontallyBelow:(UIView *)view;
 
+- (void)addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii;
+
+- (CALayer *)maskForRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii;
+
 @end
