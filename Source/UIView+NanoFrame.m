@@ -35,66 +35,66 @@
     return self.bounds.size;
 }
 
--(void)setWidth:(float)width
+-(void)setWidth:(CGFloat)width
 {
     CGRect r = self.bounds;
     r.size.width = width;
     self.bounds = r;
 }
 
--(float)width
+-(CGFloat)width
 {
     return self.bounds.size.width;
 }
 
--(void)setHeight:(float)height
+-(void)setHeight:(CGFloat)height
 {
     CGRect r = self.bounds;
     r.size.height = height;
     self.bounds = r;
 }
 
--(float)height
+-(CGFloat)height
 {
     return self.bounds.size.height;
 }
 
--(void)setX:(float)value
+-(void)setX:(CGFloat)value
 {
     [self setFrame:CGRectMake(value, self.y, self.bounds.size.width, self.bounds.size.height)];
 }
 
--(float)x
+-(CGFloat)x
 {
     return self.frame.origin.x;
 }
 
--(void)setY:(float)value
+-(void)setY:(CGFloat)value
 {
     [self setFrame:CGRectMake(self.x, value, self.bounds.size.width, self.bounds.size.height)];
 }
 
--(float)y
+-(CGFloat)y
 {
     return self.frame.origin.y;
 }
 
--(void)setRight:(float)value
+-(void)setRight:(CGFloat)value
 {
     [self setCenter:CGPointMake(value - self.bounds.size.width / 2.0f, self.center.y)];
 }
 
--(float)right
+-(CGFloat)right
 {
     return CGRectGetMaxX(self.frame);
 }
 
--(void)setBottom:(float)value
+-(void)setBottom:(CGFloat)value
 {
     [self setCenter:CGPointMake(self.center.x, value - self.bounds.size.height / 2.0f)];
 }
 
--(float)bottom
+-(CGFloat)bottom
 {
     return CGRectGetMaxY(self.frame);
 }

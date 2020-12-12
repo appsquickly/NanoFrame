@@ -14,13 +14,13 @@
 @interface UIView (NanoFrame)
 
 @property CGPoint position;
-@property float x;
-@property float y;
-@property float right;
-@property float bottom;
+@property CGFloat x;
+@property CGFloat y;
+@property CGFloat right;
+@property CGFloat bottom;
 @property CGSize viewSize;
-@property float width;
-@property float height;
+@property CGFloat width;
+@property CGFloat height;
 
 // some of these methods are inspired by Kevin O'Neill's UsefulBits UIView+Positioning methods
 // https://github.com/kevinoneill/Useful-Bits/tree/master/UsefulBits/UIKit
