@@ -19,7 +19,7 @@ extension UIView {
             frame.origin
         }
         set (value) {
-            center = CGPoint(x: position.x + bounds.size.width / 2.0, y: position.y + bounds.size.height / 2.0)
+            center = CGPoint(x: value.x + bounds.size.width / 2.0, y: value.y + bounds.size.height / 2.0)
         }
     }
 
