@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-extension CALayer {
+public extension CALayer {
 
     class func with(image: UIImage) -> CALayer {
         let layer = CALayer()

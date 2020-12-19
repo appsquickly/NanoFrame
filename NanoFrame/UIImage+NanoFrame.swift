@@ -12,7 +12,7 @@
 import Foundation
 import UIKit
 
-extension UIImage {
+public extension UIImage {
 
     class func imageWith(view: UIView) -> UIImage {
         imageWith(layer: view.layer)

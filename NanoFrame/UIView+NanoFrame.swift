@@ -12,7 +12,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
 
     var position: CGPoint {
         get {
