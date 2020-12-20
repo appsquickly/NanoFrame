@@ -32,8 +32,7 @@ public extension UIColor {
         self.init(red: components.R, green: components.G, blue: components.B, alpha: alpha)
     }
 
-    convenience init(gradient: [UIColor], direction: GradientDirection = .TopToBottom,
-                     inFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
+    convenience init(gradient: [UIColor], direction: GradientDirection = .TopToBottom, inFrame: CGRect) {
 
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = inFrame
@@ -52,8 +51,13 @@ public extension UIColor {
         self.init(patternImage: image!)
     }
 
-    convenience init(gradient: [UIColor], inFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
-        self.init(gradient: gradient, direction: .TopToBottom, inFrame: inFrame)
+
+    convenience init(topToBottom: [UIColor], inFrame: CGRect) {
+        self.init(gradient: topToBottom, direction: .TopToBottom, inFrame: inFrame)
+    }
+
+    convenience init(leftToRight: [UIColor], inFrame: CGRect) {
+        self.init(gradient: leftToRight, direction: .LeftToRight, inFrame: inFrame)
     }
 
 }
