@@ -12,6 +12,11 @@
 import Foundation
 import UIKit
 
+public enum GradientDirection {
+    case TopToBottom
+    case LeftToRight
+}
+
 public extension UIColor {
 
     convenience init(hex: Int) {
@@ -27,23 +32,28 @@ public extension UIColor {
         self.init(red: components.R, green: components.G, blue: components.B, alpha: alpha)
     }
 
-    convenience init(gradient: [UIColor], inFrame: CGRect) {
+    convenience init(gradient: [UIColor], direction: GradientDirection = .TopToBottom,
+                     inFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
 
-        // create the background layer that will hold the gradient
-        let backgroundGradientLayer = CAGradientLayer()
-        backgroundGradientLayer.frame = inFrame
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = inFrame
+        gradientLayer.colors = gradient.map({ $0.cgColor })
 
-        // we create an array of CG colors from out UIColor array
-        let cgColors = gradient.map({$0.cgColor})
+        if direction == .LeftToRight {
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
 
-        backgroundGradientLayer.colors = cgColors
-
-        UIGraphicsBeginImageContext(backgroundGradientLayer.bounds.size)
-        backgroundGradientLayer.render(in: UIGraphicsGetCurrentContext()!)
-        let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        self.init(patternImage: backgroundColorImage)
+        self.init(patternImage: image!)
+    }
+
+    convenience init(gradient: [UIColor], inFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)) {
+        self.init(gradient: gradient, direction: .TopToBottom, inFrame: inFrame)
     }
 
 }
