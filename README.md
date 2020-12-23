@@ -12,7 +12,7 @@ Getting back to basics with minimal frame-based layout and UIKit utils. (aka aut
 
 We can use it, however it pays to understand the basics first!
 
-Before there was auto-layout, there were simpler days, with frame-based layout. Autolayout came along to address the issue of laying out views relative to one another, according to various screen sizes. However it is possible (and pretty easy) to lay out views relative to one another, using frame based layouts. We need to understand to fundamental principles; 
+Before there was auto-layout, there were simpler days, with frame-based layout. Autolayout came along to address the issue of laying out views relative to one another, according to various screen sizes. However it is possible (and pretty easy) to lay out views relative to one another, using frame based layouts. We need to understand two fundamental principles; 
 
 * A `UIView`'s bounds is the `CGRect` frame, in its _own_ coordinate space. The origin `CGPoint` (0,0) is in the top left corner. 
 * A `UIView`'s frame is the CGRect _relative_ to its superview. 
