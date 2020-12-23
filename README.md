@@ -6,7 +6,7 @@ Getting back to basics with minimal frame-based layout and UIKit utils. (aka aut
 
 ## Why? 
 
-"Everything should be made as simple as possible, but no simpler". This quote, attributed to Albert Einstein doesn't just apply to solving the deepest mysteries in science. We can use it as a guide post in software development too. In fact simplicity among communication, feedback, courage and respect is one of the five core values of Extreme Programming. 
+"Everything should be made as simple as possible, but no simpler". This quote, attributed to Albert Einstein doesn't just apply to solving the deepest mysteries in science. We can use it as a guide post in software development too. In fact "simplicity" among "communication", "feedback", "courage" and "respect" is one of the five core values of Extreme Programming. 
 
 ## Why not Autolayout? 
 
