@@ -49,3 +49,17 @@ The approach above works well for composition of views. If you see a long `layou
 
 Your top-level view's model can deal at the application _domain's_ model, so if for example you have a top-level weather report view, you can feed that view a weather report model. 
 
+![Composition Example](https://raw.githubusercontent.com/appsquickly/NanoFrame/master/composite.png) 
+
+## Animation 
+
+Now that we know how to layout views relative ot one another with composition, we can animate them too. 
+
+```swift
+CATransaction.flush()
+UIView.animate(withDuration: 0.28, delay: 0, options: [.curveEaseIn], animations: { [self] in
+  titleLabel.x = starButton.x - 30
+})
+```
+
+We use a built-in animation curve above. However we could easily apply functions from Newtonian physics to approximate gravity, friction and so forth. 
