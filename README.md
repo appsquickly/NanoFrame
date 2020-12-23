@@ -1,6 +1,6 @@
 # NanoFrame
 
-Minimal frame-based layout and UIKit utils. 
+Getting back to basics with minimal frame-based layout and UIKit utils.
 
 -----
 
