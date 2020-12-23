@@ -1,6 +1,6 @@
 # NanoFrame
 
-Getting back to basics with minimal frame-based layout and UIKit utils.
+Getting back to basics with minimal frame-based layout and UIKit utils. (aka auto-layout without using auto-layout). 
 
 -----
 
@@ -39,7 +39,9 @@ override func layoutSubviews() {
 }
 ```
 
-In the example above we're laying out the `titleLabel` and `starButton` _relative_ to the superview, just as we do with auto-layout. The difference is that we must do this in the `layoutSubviews()` function (with autolayout we can declare constraints anywhere) however we might consider this a feature not a bug. Now we know where to look for layout related code. 
+In the example above we're laying out the `titleLabel` and `starButton` _relative_ to the superview, just as we do with auto-layout. In fact if we renamed the `x` and `right` computed properties to `leading` and `trailing` it would look even more like auto-layout. 
+
+The difference is that we must do this in the `layoutSubviews()` function (with autolayout we can declare constraints anywhere) however we might consider this a feature. Now we know where to look for layout related code. 
 
 ## Composition 
 
