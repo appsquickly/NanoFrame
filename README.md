@@ -19,7 +19,7 @@ Before there was auto-layout, there were simpler days, with frame-based layout. 
 
 :warning:  _When a view is the root view, its frame and bounds are the same_. 
 
-Note the word relative above. We can now lay out views relative to one another using frame and bounds. But just working at a `CGRect` level of abstraction becomes verbose and requires a lot of tedious arithmetic. Computers love tedious arithmetic, so let's add some extension function to `UIView` for commmon operations. Now we can lay out views as follows: 
+Note the word relative above. We can now lay out views relative to one another using frame and bounds. But just working at a `CGRect` level of abstraction becomes verbose and requires a lot of tedious arithmetic. Computers love tedious arithmetic, so let's add some extension functions to `UIView` for commmon operations. Now we can lay out views as follows: 
 
 ```swift
 override func layoutSubviews() {
@@ -51,7 +51,7 @@ There is a reason we come across the word 'compositing' a lot when it comes to g
 
 :warning:  _In fact, we can use [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) as a general rule of thumb._ 
 
-The approach above works well for composition of views. If you see a long `layoutSubviews()` function, there's some evidence that extracting a reusable subview promote reusablility. Now you can layout this child view relative to the parent. And it becomes simple to reaon about. 
+The approach above works well for composition of views. If you see a long `layoutSubviews()` function, there's some evidence that extracting a reusable subview will promote reusablility. Now you can layout this child view relative to the parent. And it becomes simple to reaon about. 
 
 Your top-level view's model can deal at the application _domain's_ model, so if for example you have a top-level weather report view, you can feed that view a weather report model. 
 
