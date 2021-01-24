@@ -55,7 +55,7 @@ public extension UIView {
             frame.maxY;
         }
         set (newValue) {
-            center = CGPoint(x: center.x, y: bounds.size.height / 2.0)
+            center = CGPoint(x: center.x, y: newValue - bounds.size.height / 2.0)
         }
     }
 
