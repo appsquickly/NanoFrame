@@ -38,7 +38,7 @@ public extension UIColor {
             fatalError("Gradient is useless without at least two colors")
         }
 
-        if inFrame.size == .zero {
+        if inFrame.size.height == 0 || inFrame.size.width == 0 {
             self.init(hex: 0x000000)
         } else {
             let gradientLayer = CAGradientLayer()
