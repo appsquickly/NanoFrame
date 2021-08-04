@@ -101,14 +101,17 @@ public extension UIView {
     }
 
     func centerInSuperView() {
+        guard superview != nil else { return }
         center = CGPoint(x: superview!.bounds.size.width / 2.0, y: superview!.bounds.size.height / 2.0)
     }
 
     func centerVerticallyInSuperView() {
+        guard superview != nil else { return }
         y = (superview!.bounds.size.height - bounds.size.height) / 2.0;
     }
 
     func centerHorizontallyInSuperView() {
+        guard superview != nil else { return }
         x = (superview!.bounds.size.width - bounds.size.width) / 2.0;
     }
 
